@@ -4,5 +4,4 @@ qmake
 make
 ./QNetSoul
 
-ne faites pas attnetion aux erreurs a la fin de la compilation normalement elles sont anodines.
 

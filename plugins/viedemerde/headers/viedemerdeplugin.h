@@ -10,7 +10,7 @@ class QNetworkAccessManager;
 class VieDeMerdePlugin : public IPopupPlugin
 {
   Q_OBJECT
-  Q_INTERFACES(IPopupPlugin)
+  //  Q_INTERFACES(IPopupPlugin)
 
     public:
     VieDeMerdePlugin(void);
