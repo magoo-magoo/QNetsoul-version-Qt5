@@ -26,36 +26,36 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = plugins1.0.0
-DISTDIR = /home/drdrak/qnetsoul/plugins/.tmp/plugins1.0.0
+DISTDIR = /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/.tmp/plugins1.0.0
 SUBTARGETS    =  \
 		sub-viedemerde
 
 
 sub-viedemerde-qmake_all:  FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile
+	cd viedemerde/ && $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile
 	cd viedemerde/ && $(MAKE) -f Makefile qmake_all
 sub-viedemerde: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile
 sub-viedemerde-make_first: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile 
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile 
 sub-viedemerde-all: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile all
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile all
 sub-viedemerde-clean: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile clean
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile clean
 sub-viedemerde-distclean: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile distclean
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile distclean
 sub-viedemerde-install_subtargets: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile install
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile install
 sub-viedemerde-uninstall_subtargets: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile uninstall
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile uninstall
 
 Makefile: plugins.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/shell-unix.conf \
@@ -329,7 +329,7 @@ uninstall_subtargets: sub-viedemerde-uninstall_subtargets FORCE
 
 sub-viedemerde-check:
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile check
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -f Makefile check
 check: sub-viedemerde-check
 install: install_subtargets  FORCE
 
@@ -346,5 +346,5 @@ distdir: sub-viedemerde-distdir FORCE
 
 sub-viedemerde-distdir: FORCE
 	@test -d viedemerde/ || mkdir -p viedemerde/
-	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/qnetsoul/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/viedemerde
+	cd viedemerde/ && ( test -e Makefile || $(QMAKE) /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/viedemerde.pro -spec linux-g++ -o Makefile ) && $(MAKE) -e -f Makefile distdir DISTDIR=$(DISTDIR)/viedemerde
 

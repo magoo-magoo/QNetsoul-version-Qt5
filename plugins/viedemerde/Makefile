@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = VieDeMerde1.0.0
-DISTDIR = /home/drdrak/qnetsoul/plugins/viedemerde/obj/VieDeMerde1.0.0
+DISTDIR = /home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/obj/VieDeMerde1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-O1,--sort-common,--as-needed,-z,relro -shared
 LIBS          = $(SUBLIBS) -lQt5Gui -lQt5Network -lQt5Core -lGL -lpthread 
@@ -553,11 +553,11 @@ compiler_moc_header_clean:
 moc/moc_viedemerdeplugin.cpp: ../../qns/interfaces/ipopupplugin.h \
 		../../qns/interfaces/iplugindescriptor.h \
 		headers/viedemerdeplugin.h
-	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/qnetsoul/plugins/viedemerde -I/home/drdrak/qnetsoul/plugins/viedemerde -I/home/drdrak/qnetsoul/plugins/viedemerde/headers -I/home/drdrak/qnetsoul/tools -I/home/drdrak/qnetsoul/qns/interfaces -I/usr/include/qt -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/viedemerdeplugin.h -o moc/moc_viedemerdeplugin.cpp
+	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde -I/home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde -I/home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/headers -I/home/drdrak/Projet/QNetsoul-version-Qt5/tools -I/home/drdrak/Projet/QNetsoul-version-Qt5/qns/interfaces -I/usr/include/qt -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/viedemerdeplugin.h -o moc/moc_viedemerdeplugin.cpp
 
 moc/moc_ipopupplugin.cpp: ../../qns/interfaces/iplugindescriptor.h \
 		../../qns/interfaces/ipopupplugin.h
-	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/qnetsoul/plugins/viedemerde -I/home/drdrak/qnetsoul/plugins/viedemerde -I/home/drdrak/qnetsoul/plugins/viedemerde/headers -I/home/drdrak/qnetsoul/tools -I/home/drdrak/qnetsoul/qns/interfaces -I/usr/include/qt -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include ../../qns/interfaces/ipopupplugin.h -o moc/moc_ipopupplugin.cpp
+	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde -I/home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde -I/home/drdrak/Projet/QNetsoul-version-Qt5/plugins/viedemerde/headers -I/home/drdrak/Projet/QNetsoul-version-Qt5/tools -I/home/drdrak/Projet/QNetsoul-version-Qt5/qns/interfaces -I/usr/include/qt -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include ../../qns/interfaces/ipopupplugin.h -o moc/moc_ipopupplugin.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:

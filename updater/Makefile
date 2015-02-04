@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Updater1.0.0
-DISTDIR = /home/drdrak/qnetsoul/updater/obj/Updater1.0.0
+DISTDIR = /home/drdrak/Projet/QNetsoul-version-Qt5/updater/obj/Updater1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-O1,--sort-common,--as-needed,-z,relro
 LIBS          = $(SUBLIBS) -lQt5Widgets -lQt5Gui -lQt5Network -lQt5Core -lGL -lpthread 
@@ -556,14 +556,14 @@ compiler_moc_header_clean:
 	-$(DEL_FILE) moc/moc_Updater.cpp moc/moc_Credentials.cpp moc/moc_CredentialsDialog.cpp
 moc/moc_Updater.cpp: ui_Updater.h \
 		headers/Updater.h
-	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/qnetsoul/updater -I/home/drdrak/qnetsoul/updater -I/home/drdrak/qnetsoul/updater/headers -I/home/drdrak/qnetsoul/updater/tpl -I/home/drdrak/qnetsoul/tools -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/Updater.h -o moc/moc_Updater.cpp
+	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater/headers -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater/tpl -I/home/drdrak/Projet/QNetsoul-version-Qt5/tools -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/Updater.h -o moc/moc_Updater.cpp
 
 moc/moc_Credentials.cpp: headers/Credentials.h
-	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/qnetsoul/updater -I/home/drdrak/qnetsoul/updater -I/home/drdrak/qnetsoul/updater/headers -I/home/drdrak/qnetsoul/updater/tpl -I/home/drdrak/qnetsoul/tools -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/Credentials.h -o moc/moc_Credentials.cpp
+	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater/headers -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater/tpl -I/home/drdrak/Projet/QNetsoul-version-Qt5/tools -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/Credentials.h -o moc/moc_Credentials.cpp
 
 moc/moc_CredentialsDialog.cpp: ui_CredentialsDialog.h \
 		headers/CredentialsDialog.h
-	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/qnetsoul/updater -I/home/drdrak/qnetsoul/updater -I/home/drdrak/qnetsoul/updater/headers -I/home/drdrak/qnetsoul/updater/tpl -I/home/drdrak/qnetsoul/tools -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/CredentialsDialog.h -o moc/moc_CredentialsDialog.cpp
+	/usr/lib/qt/bin/moc $(DEFINES) -I/usr/lib/qt/mkspecs/linux-g++ -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater/headers -I/home/drdrak/Projet/QNetsoul-version-Qt5/updater/tpl -I/home/drdrak/Projet/QNetsoul-version-Qt5/tools -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtNetwork -I/usr/include/qt/QtCore -I/usr/include/c++/4.9.2 -I/usr/include/c++/4.9.2/x86_64-unknown-linux-gnu -I/usr/include/c++/4.9.2/backward -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include -I/usr/local/include -I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include-fixed -I/usr/include headers/CredentialsDialog.h -o moc/moc_CredentialsDialog.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
