@@ -69,6 +69,7 @@ private slots:
   void  notifyTypingStatus(const int id, const bool typing);
   void  setPortrait(const QString&);
   void  aboutQNetSoul(void);
+  void  darkFusionStyle(void);
 
 private:
   Chat* getChat(const int id);
@@ -97,6 +98,7 @@ private:
   QTimer*           _ping;
   InternUpdater*    _internUpdater;
   PluginsManager*   _pluginsManager;
+  QPalette         _initPalette;
 };
 
 #endif // QNETSOUL_H_

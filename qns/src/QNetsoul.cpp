@@ -19,6 +19,7 @@
 #include <QDateTime>
 #include <QMessageBox>
 #include <QCryptographicHash>
+#include <QStyleFactory>
 
 #include "Url.h"
 #include "Chat.h"
@@ -47,7 +48,7 @@ QNetsoul::QNetsoul(void)
     _vdm(new VieDeMerde(this->_popup)),
     _cnf(new ChuckNorrisFacts(this->_popup)), _ping(new QTimer(this)),
     _internUpdater(new InternUpdater(this)),
-    _pluginsManager(new PluginsManager)
+    _pluginsManager(new PluginsManager), _initPalette(QApplication::palette())
 {
   setupUi(this);
   setupTrayIcon();
@@ -67,6 +68,8 @@ QNetsoul::QNetsoul(void)
   this->tree->initTree();
   if (this->_options->mainWidget->autoConnect())
     connectToServer();
+  if (this->_options->mainWidget->darkTheme())
+      darkFusionStyle();
   this->_portraitResolver->addRequest(this->tree->getLoginList());
   const QString startWith = this->_options->funWidget->getStartingModule();
   if (startWith == QObject::tr("Vie de merde"))
@@ -521,6 +524,37 @@ void    QNetsoul::aboutQNetSoul(void)
   QMessageBox::about(this, "QNetSoul", this->whatsThis());
 }
 
+void    QNetsoul::darkFusionStyle(void)
+{
+  if (_options->darkTheme->isChecked())
+  {
+      QApplication::setStyle(QStyleFactory::create("Fusion"));
+
+      QPalette darkPalette;
+      darkPalette.setColor(QPalette::Window, QColor(53,53,53));
+      darkPalette.setColor(QPalette::WindowText, Qt::white);
+      darkPalette.setColor(QPalette::Base, QColor(25,25,25));
+      darkPalette.setColor(QPalette::AlternateBase, QColor(53,53,53));
+      darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
+      darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+      darkPalette.setColor(QPalette::Text, Qt::white);
+      darkPalette.setColor(QPalette::Button, QColor(53,53,53));
+      darkPalette.setColor(QPalette::ButtonText, Qt::white);
+      darkPalette.setColor(QPalette::BrightText, Qt::red);
+      darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
+
+      darkPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+      darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+      QApplication::setPalette(darkPalette);
+  }
+  else
+  {
+      QApplication::setPalette(_initPalette);
+  }
+  //QApplication::setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
+}
+
+
 Chat*   QNetsoul::getChat(const int id)
 {
   QHash<int, Chat*>::iterator it;
@@ -626,6 +660,7 @@ void    QNetsoul::connectActionsSignals(void)
           this->_pastebin, SLOT(pastebinIt()));
   // Options
   connect(actionPreferences, SIGNAL(triggered()), SLOT(openOptionsDialog()));
+  connect(_options->darkTheme, SIGNAL(clicked()), SLOT(darkFusionStyle()));
   // Help
   connect(actionAbout_QNetSoul, SIGNAL(triggered()), SLOT(aboutQNetSoul()));
   connect(actionAbout_Qt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));

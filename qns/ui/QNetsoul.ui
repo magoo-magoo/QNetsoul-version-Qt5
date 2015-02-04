@@ -96,9 +96,6 @@ p, li { white-space: pre-wrap; }
         <attribute name="headerVisible">
          <bool>false</bool>
         </attribute>
-        <attribute name="headerVisible">
-         <bool>false</bool>
-        </attribute>
         <column>
          <property name="text">
           <string notr="true">1</string>
@@ -116,7 +113,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>411</width>
-     <height>23</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOptions">
@@ -395,6 +392,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionPluginsManager">
    <property name="text">
     <string>&amp;Plugins manager</string>
+   </property>
+  </action>
+  <action name="actionStyle">
+   <property name="text">
+    <string>dark style</string>
    </property>
   </action>
  </widget>

@@ -30,15 +30,19 @@ class	OptionsMainWidget : public QWidget, public AbstractOptions
   ~OptionsMainWidget(void);
 
   bool	autoConnect(void) const { return this->_autoConnect; }
+  bool	darkTheme(void) const { return this->_darkTheme; }
   void	setConnectionOnOk(const bool& value) { this->_connectOnOk = value; }
 
   void	readOptions(QSettings& settings);
   void	writeOptions(QSettings& settings);
   void	updateOptions(void);
   void	saveOptions(void);
+  bool  isAutoSave() const;
 
 signals:
   void	loginPasswordFilled(void);
+
+private slots:
 
 private:
   QString	_server;
@@ -50,6 +54,8 @@ private:
   bool		_savePassword;
   bool		_autoConnect;
   bool		_connectOnOk;
+  bool      _darkTheme;
+
 };
 
 #endif

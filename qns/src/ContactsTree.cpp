@@ -21,6 +21,7 @@
 #include <QFileDialog>
 #include <QInputDialog>
 #include <QApplication>
+#include <QShortcut>
 #include "Network.h"
 #include "ContactsTree.h"
 #include "ContactsReader.h"
@@ -53,6 +54,7 @@ ContactsTree::ContactsTree(QWidget* parent)
   setEditTriggers(QAbstractItemView::EditKeyPressed);
   connect(&this->_addContactDialog, SIGNAL(newContact(const QStringList&)),
           this, SLOT(addContact(const QStringList&)));
+  connect(new QShortcut(QKeySequence::Delete, this), SIGNAL(activated()), this, SLOT(removeCurrentItem()));
   createContextMenus();
 }
 
@@ -511,6 +513,7 @@ bool    ContactsTree::addContact(const QStringList& properties)
 
   this->_network->monitorContact(properties.at(1));
   this->_network->refreshContact(properties.at(1));
+  saveContacts();
   return true;
 }
 

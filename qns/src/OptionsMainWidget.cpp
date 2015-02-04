@@ -23,7 +23,7 @@
 
 OptionsMainWidget::OptionsMainWidget(QWidget* parent)
   : QWidget(parent), _savePassword(false),
-    _autoConnect(false), _connectOnOk(false)
+    _autoConnect(false), _connectOnOk(false), _darkTheme(false)
 {
 }
 
@@ -42,6 +42,8 @@ void	OptionsMainWidget::readOptions(QSettings& settings)
   this->_password = settings.value("password").toString();
   this->_savePassword = settings.value("savepassword", false).toBool();
   this->_autoConnect = settings.value("autoconnect", false).toBool();
+  qDebug() << "darkTheme read = " << _darkTheme;
+  this->_darkTheme = settings.value("darktheme", false).toBool();
   settings.endGroup();
 
   this->_password = Tools::unencrypt(this->_password);
@@ -60,6 +62,8 @@ void	OptionsMainWidget::writeOptions(QSettings& settings)
     settings.remove("password");
   settings.setValue("savepassword", this->_savePassword);
   settings.setValue("autoconnect", this->_autoConnect);
+  qDebug() << "darkTheme write = " << _darkTheme;
+  settings.setValue("darktheme", this->_darkTheme);
   settings.endGroup();
 }
 
@@ -75,6 +79,7 @@ void	OptionsMainWidget::updateOptions(void)
   this->_options->commentLineEdit->setText(this->_comment);
   this->_options->savePasswordCheckBox->setChecked(this->_savePassword);
   this->_options->autoConnectCheckBox->setChecked(this->_autoConnect);
+  this->_options->darkTheme->setChecked(this->_darkTheme);
 }
 
 void	OptionsMainWidget::saveOptions(void)
@@ -89,6 +94,7 @@ void	OptionsMainWidget::saveOptions(void)
   this->_comment = this->_options->commentLineEdit->text();
   this->_savePassword = this->_options->savePasswordCheckBox->isChecked();
   this->_autoConnect = this->_options->autoConnectCheckBox->isChecked();
+  this->_darkTheme = this->_options->darkTheme->isChecked();
   if (!this->_login.isEmpty() &&
       !this->_password.isEmpty() &&
       this->_connectOnOk)
