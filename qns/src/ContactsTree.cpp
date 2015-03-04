@@ -454,6 +454,7 @@ void    ContactsTree::addContact(void)
       this->_addContactDialog.show();
     }
   else this->_addContactDialog.activateWindow();
+  saveContacts();
 }
 
 // Slot used by AddContact class

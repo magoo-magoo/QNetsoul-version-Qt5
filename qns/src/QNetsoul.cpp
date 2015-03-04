@@ -83,6 +83,7 @@ QNetsoul::QNetsoul(void)
 
 QNetsoul::~QNetsoul(void)
 {
+  this->tree->saveContacts();
   delete this->_vdm;
   delete this->_cnf;
   delete this->_popup;
